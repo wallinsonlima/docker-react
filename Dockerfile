@@ -5,5 +5,4 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-FROM nginx
-COPY --from=builder /app/build /usr/share/nignx/html
+CMD ["npm", "run", "start"]
